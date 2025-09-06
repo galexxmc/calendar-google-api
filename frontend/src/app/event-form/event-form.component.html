@@ -1,0 +1,36 @@
+<div class="event-container">
+  <h2>Crear Evento</h2>
+  <form [formGroup]="eventForm" (ngSubmit)="onCreateEvent()">
+    <label for="summary">Título del Evento:</label>
+    <input id="summary" type="text" formControlName="summary">
+
+    <label for="startTime">Fecha y Hora de Inicio:</label>
+    <input id="startTime" type="datetime-local" formControlName="startTime">
+
+    <label for="endTime">Fecha y Hora de Fin:</label>
+    <input id="endTime" type="datetime-local" formControlName="endTime">
+
+    <h3>Participantes</h3>
+    <div formArrayName="emails" class="emails-container">
+      <div *ngFor="let email of emailsFormArray.controls; let i = index">
+        <input type="email" [formControlName]="i">
+        <button type="button" (click)="removeEmail(i)">Eliminar</button>
+      </div>
+      <button type="button" (click)="addEmail()">Agregar Correo</button>
+    </div>
+    
+
+  <div class="event-form-container">
+  <form [formGroup]="eventForm" (ngSubmit)="onCreateEvent()">
+    <button type="submit">Crear evento</button>
+  </form>
+  <button (click)="logout()">Cerrar sesión</button>
+</div>
+  </form>
+
+  <div *ngIf="successMessage" class="success-message">
+    <p>{{ successMessage }}</p>
+    <p>Enlace del evento: <a [href]="htmlLink">{{ htmlLink }}</a></p>
+    <p>Enlace de Meet: <a [href]="meetLink">{{ meetLink }}</a></p>
+  </div>
+</div>
