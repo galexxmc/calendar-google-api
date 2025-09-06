@@ -34,7 +34,7 @@ public class CalendarController {
         try {
             calendarService.storeCredentials(code, userId);
 
-            // Si todo es exitoso, envía el script para cerrar la ventana y recargar la página principal
+            // Si atodo es exitoso, envía el script para cerrar la ventana y recargar la página principal
             String script = "<script>window.close(); window.opener.location.reload();</script>";
             response.setContentType("text/html");
             response.getWriter().write(script);
