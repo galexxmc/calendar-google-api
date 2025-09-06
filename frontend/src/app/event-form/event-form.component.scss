@@ -23,8 +23,7 @@ label {
 }
 
 input[type="text"],
-input[type="datetime-local"],
-input[type="email"] {
+input[type="datetime-local"]{
   width: 100%;
   padding: 12px;
   margin-bottom: 20px;
@@ -56,6 +55,36 @@ input:focus {
   margin-right: 10px;
 }
 
+.button-delate{
+  margin: 0px;
+  background-color: #c14848;
+}
+
+.input-correo{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.button-correo{
+  background-color: #dcbb40;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+  width: auto;
+  margin-top: 10px;
+}
+
+
 button {
   background-color: #007bff;
   color: white;
@@ -70,10 +99,6 @@ button {
   margin-top: 10px;
 }
 
-button:hover {
-  background-color: #0056b3;
-  transform: translateY(-2px);
-}
 
 button:active {
   transform: translateY(0);
@@ -102,12 +127,18 @@ button:active {
   border: 1px solid #c3e6cb;
   border-radius: 6px;
   text-align: center;
+  /* Nuevos estilos para evitar desbordamiento */
+  word-wrap: break-word; /* Para navegadores más antiguos */
+  overflow-wrap: break-word; /* Estándar moderno */
 }
 
 .success-message a {
   color: #155724;
   font-weight: bold;
   text-decoration: none;
+  /* Nuevos estilos para los enlaces */
+  word-wrap: break-word; /* Para navegadores más antiguos */
+  overflow-wrap: break-word; /* Estándar moderno */
 }
 
 .success-message a:hover {

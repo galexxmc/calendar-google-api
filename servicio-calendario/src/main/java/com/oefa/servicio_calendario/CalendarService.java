@@ -111,7 +111,7 @@ public class CalendarService {
 
         Event event = new Event()
                 .setSummary((String) eventData.get("summary"))
-                .setDescription("Evento generado por el servicio de calendario OEFA");
+                .setDescription("Evento generado por el servicio de Google Calendar - OEFA");
 
         event.setConferenceData(new ConferenceData().setCreateRequest(new CreateConferenceRequest().setRequestId("randomIdHere")));
 
@@ -144,7 +144,7 @@ public class CalendarService {
         }
 
         String calendarId = "primary";
-        event = service.events().insert(calendarId, event).setConferenceDataVersion(1).execute();
+        event = service.events().insert(calendarId, event).setConferenceDataVersion(1).setSendUpdates("all").execute();
 
         String meetLink = null;
         if (event.getConferenceData() != null) {

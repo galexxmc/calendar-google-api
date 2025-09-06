@@ -56,7 +56,6 @@ button[type="submit"] {
   font-size: 18px;
   font-weight: bold;
   transition: background-color 0.3s, transform 0.2s;
-  margin-top: 10px;
 }
 
 button[type="submit"]:hover {
@@ -71,5 +70,20 @@ button[type="submit"]:active {
 p {
   margin-top: 25px;
   color: #777;
+}
+
+a {
+  color: #007bff; /* Color azul para los enlaces */
+  text-decoration: none;
   font-weight: bold;
+  cursor: pointer; /* <--- Asegúrate de que esto esté aquí */
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Agrega un estilo específico para el enlace de login/registro si quieres diferenciarlo */
+.register-container p {
+  font-weight: normal; /* Opcional, para que solo el enlace esté en negrita */
 }
