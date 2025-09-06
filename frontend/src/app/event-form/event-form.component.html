@@ -13,10 +13,10 @@
     <h3>Participantes</h3>
     <div formArrayName="emails" class="emails-container">
       <div *ngFor="let email of emailsFormArray.controls; let i = index">
-        <input type="email" [formControlName]="i">
-        <button type="button" (click)="removeEmail(i)">Eliminar</button>
+        <input type="email" class="input-correo" [formControlName]="i">
+        <button type="button" class="button-delate" (click)="removeEmail(i)">Eliminar</button>
       </div>
-      <button type="button" (click)="addEmail()">Agregar Correo</button>
+      <button type="button" class="button-correo" (click)="addEmail()">Agregar Correo</button>
     </div>
     
 
